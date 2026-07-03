@@ -16,9 +16,8 @@ export default function Display({ value }: DisplayProps): JSX.Element {
         style={{
           fontSize: value.length > 12 ? `${Math.max(16, 32 - value.length * 1.5)}px` : '32px',
           whiteSpace: 'nowrap',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
           maxWidth: '100%',
+          overflow: 'hidden',
         }}
       >
         {value}
