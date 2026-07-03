@@ -1,9 +1,14 @@
-import type { Metadata } from 'next'
-import './layout.css'
+import type { Metadata, Viewport } from 'next'
+import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'BasicCalc',
   description: 'A simple calculator app',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -13,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+      </head>
       <body>
         {children}
       </body>
